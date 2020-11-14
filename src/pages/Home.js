@@ -7,9 +7,9 @@ import PostForm from '../components/PostForm'
 import { FETCH_POSTS_QUERY } from '../util/graphql'
 
 export default function Home() {
-	// destructuring loading and data obj, data obj being destructured to get the payload getPosts which is aliased to posts
+	// destructuring loading and data obj, data obj being destructured to get the payload getPosts which is aliased to posts.
 	const { loading, data } = useQuery(FETCH_POSTS_QUERY);
-	const { user } = useContext(AuthContext)
+	const { user } = useContext(AuthContext) //grabbing user from Context
 	return (
 		<Grid columns={3}>
 			<Grid.Row className="page-title">

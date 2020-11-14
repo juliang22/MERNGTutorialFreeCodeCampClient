@@ -5,7 +5,7 @@ import { ApolloProvider, InMemoryCache, ApolloClient } from '@apollo/client'
 import { createHttpLink } from "apollo-link-http";
 import { setContext } from 'apollo-link-context'
 
-const httplink = createHttpLink({ uri: "http://localhost:5000" });
+const httplink = createHttpLink({ uri: "https://ffc-merng-tutorial-server.herokuapp.com" });
 
 const AuthLink = setContext(() => {
 	const token = localStorage.getItem('jwtToken')
